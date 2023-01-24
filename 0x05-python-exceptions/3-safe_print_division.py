@@ -7,9 +7,9 @@ def safe_print_division(a, b):
     catches divide by zero exception
     """
     try:
-        res = a / b
-    except:
-        res = None
+        div = a / b
+    except (TypeError, ZeroDivisionError):
+        div = None
     finally:
         print("Inside result: {}".format(res))
-    return res
+    return div
